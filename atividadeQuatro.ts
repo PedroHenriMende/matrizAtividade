@@ -1,17 +1,20 @@
 /*Pedro Henrique Mendes De Jesus 
-3- Altere o código um(1) desse conteúdo para funcionar com números e ter duas colunas. */
+4- Altere o código dois(2) desse conteúdo para funcionar
+com números, faça o teste se o laço de repetição
+referente a linha da matriz chega criar a quarta linha, salve
+dessa forma e anexe a atividade o arquivo .ts e um print
+da tela do cmd(prompt command) com o resultado do
+teste. */
 console.clear();
 
 let teclado = require (`prompt-sync`)();
-let minhaMatriz: string [][] = [];
-let linha: number = 1; 
-let coluna: number = 1;
+let minhaMatriz: number [][] = [];
 
-for (let z = 0; z<= linha; z++) {  
-    minhaMatriz[z] = [];  
-    for (let x=0; x <= coluna ; x++) {  
-        let nome: string = teclado(`Digite o nome que vai estar no endereco [${z}, ${x}]  sda matriz: ;`);  
-        minhaMatriz[z][x]= nome;  
-    }  
-}  
-console.log(minhaMatriz); 
+for (let x =0; x < 3; x++ ){
+    minhaMatriz[x] = new Array(3);
+    for(let i = 0; i < 4; i++){
+        let nome: number = teclado(`Digite os numeros no [${x}, ${i}]`);
+        minhaMatriz[x][i] = nome;
+    }
+}
+console.log(minhaMatriz);
